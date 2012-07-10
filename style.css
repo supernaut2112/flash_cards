@@ -1,0 +1,30 @@
+#content
+{
+	margin-left:auto;
+	margin-right:auto;
+	width:500px;
+}
+h1
+{
+    padding: 0;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#flashcard
+{
+	margin-left:auto;
+	margin-right:auto;
+	width:450px;	
+}
+
+#control_panel
+{
+	font-size:40px;
+   padding: 0;
+   margin-left: auto;
+   margin-right: auto;
+	width:490px;
+
+}
