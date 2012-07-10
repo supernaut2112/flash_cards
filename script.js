@@ -34,7 +34,9 @@ $(document).ready(function()
 
 });
 
-
+// BKM20120709
+// aNotes:	array holding filenames of images used on page
+// sNote:	string that holds the name of the image file (c1.png)
 function getRandomImageFilename()
 {
 	// hold all filenames in an array
