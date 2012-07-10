@@ -14,8 +14,7 @@ $(document).ready(function()
 		// user gets the correct note
 		if(bNotesMatch)
 		{
-			sFilename = getRandomImageFilename();
-			loadImage(sFilename);
+			fadeOutImage();
 			oStatusDiv = $("#status");
 			oStatusDiv.addClass("correct");
 			oStatusDiv.removeClass("incorrect");
@@ -36,6 +35,16 @@ $(document).ready(function()
 	
 
 });
+
+function fadeOutImage()
+{
+	$("#flashcard img").fadeOut("fast", function () {
+		sFilename = getRandomImageFilename();
+		loadImage(sFilename);
+	});
+	$("#flashcard img").fadeIn("fast");
+				
+}
 
 // BKM20120709
 // aNotes:	array holding filenames of images used on page
