@@ -17,13 +17,16 @@ $(document).ready(function()
 			sFilename = getRandomImageFilename();
 			loadImage(sFilename);
 			oStatusDiv = $("#status");
-			oStatusDiv.css("color","green");
+			oStatusDiv.addClass("correct");
+			oStatusDiv.removeClass("incorrect");
+
 			$("#status").text("Correct");
 		}
 		else
 		{
 			oStatusDiv = $("#status");
-			oStatusDiv.css("color","red");
+			oStatusDiv.addClass("incorrect");
+			oStatusDiv.removeClass("correct");
 			$("#status").text("Nope");
 
 		}

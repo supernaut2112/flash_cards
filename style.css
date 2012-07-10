@@ -1,30 +1,89 @@
+/* courtesy of http://blog.html.it/layoutgala/ */
+html,body{margin:0;padding:0}
+body{font: 76% arial,sans-serif;text-align:center}
+p{margin:0 10px 10px}
+a{display:block;color: #006;padding:10px}
+div#header{position:relative}
+div#header h1{height:80px;line-height:80px;margin:0;
+padding-left:10px;background: #EEE;color: #79B30B}
+div#header a{position:absolute;right:0;top:23px}
+div#container{text-align:left}
+div#content p{line-height:1.4}
+div#navigation{background:#B9CAFF}
+div#extra{background:#FF8539}
+div#footer{background: #333;color: #FFF}
+div#footer p{margin:0;padding:5px 10px}
+div#footer a{display:inline;padding:0;color: #C6D5FD}
+
+div#container{width:700px;margin:0 auto}
+div#wrapper{float:left;width:700px; border-style:solid;}
+div#content{margin: 0 150px}
+div#navigation{float:left;width:150px;margin-left:-150px}
+div#extra{float:left;width:150px;margin-left:-700px}
+div#footer{clear:left;width:100%}
+
+
 #content
 {
-	margin-left:auto;
-	margin-right:auto;
-	width:500px;
+	margin:auto;
 }
-h1
+
+#content img
 {
-    padding: 0;
-    width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+	padding-left:95px;
+}
+
+#content h1
+{
+	text-align:center
 }
 
 #flashcard
 {
 	margin-left:auto;
 	margin-right:auto;
-	width:450px;	
 }
 
 #control_panel
 {
+   padding-bottom: 10px;
+	text-align:center;
+}
+
+
+#control_panel span
+{
 	font-size:40px;
-   padding: 0;
-   margin-left: auto;
-   margin-right: auto;
-	width:490px;
+	background-color:#DBDBDB;
+	border-color:#A8A8A8;
+	border-style:solid;
+	border-width:1px;
+	padding: 2px 7px 2px 7px;
+}
+
+#control_panel span:hover
+{
+	background-color:black;
+	color:#DBDBDB;
+	cursor: hand;
+}
+
+#status
+{
+	text-align:center;
+	width:324px;
+	margin:auto;
+}
+
+#status.correct
+{
+	background-color:#9AFF73;
+	color:#1E6B00;
+}
+
+#status.incorrect
+{
+	background-color:#FF9E9E;
+	color:red;
 
 }
