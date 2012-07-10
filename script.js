@@ -38,21 +38,21 @@ $(document).ready(function()
 function getRandomImageFilename()
 {
 	// hold all filenames in an array
-	var notes = new Array("a1","a2","b1","b2","c1","c2","c3","d1","d2","d3","e1","e2","e3","f1","f2","g1","g2");
+	var aNotes = new Array("a1","a2","b1","b2","c1","c2","c3","d1","d2","d3","e1","e2","e3","f1","f2","g1","g2");
 	
-	var note = notes[Math.floor(Math.random()*notes.length)];
-	note += ".png";
-	return note;
+	var sNote = aNotes[Math.floor(Math.random()*aNotes.length)];
+	sNote += ".png";
+	return sNote;
 }
 
-function loadImage(imageFile)
+function loadImage(sImageFilename)
 {
-	$("#flashcard img").attr("src", imageFile);
+	$("#flashcard img").attr("src", sImageFilename);
 }
 
-function doNotesMatch(note1, note2)
+function doNotesMatch(sNote1, sNote2)
 {
-	if(note1 == note2)
+	if(sNote1 == sNote2)
 	{
 		return true;
 	}
