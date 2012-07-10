@@ -6,11 +6,47 @@ $(document).ready(function()
 	$("#control_panel span").click(function()
 	{
 		var sClickedNote = $(this).text();
-		var sCurrentNote = $("#flashcard img").attr("src");
-		sCurrentNote = sCurrentNote.substring(0, 1);
-		sCurrentNote = sCurrentNote.toUpperCase();
+		var sCurrentNote = getCurrentNote();
 		var bNotesMatch = doNotesMatch(sClickedNote,sCurrentNote);
 
+		updateStatusBar(bNotesMatch);
+
+		
+	});
+	
+	$('body').bind('keydown', function(e) 
+	{
+		// a=65 and g=71
+		var nKeyPressed = e.keyCode;
+	  if(nKeyPressed >= 65 && nKeyPressed <= 71)
+	  {
+			var sTypedNote = keyCodeToLetter(nKeyPressed);
+			var sCurrentNote = getCurrentNote();
+			var bNotesMatch = doNotesMatch(sTypedNote,sCurrentNote);
+			updateStatusBar(bNotesMatch);
+
+	  }
+	});
+	  
+	
+
+	
+	
+
+});
+
+function getCurrentNote()
+{
+	var sCurrentNote = $("#flashcard img").attr("src");
+	sCurrentNote = sCurrentNote.substring(0, 1);
+	sCurrentNote = sCurrentNote.toUpperCase();
+	return sCurrentNote;
+	
+}
+
+
+function updateStatusBar(bNotesMatch)
+{
 		// user gets the correct note
 		if(bNotesMatch)
 		{
@@ -29,12 +65,20 @@ $(document).ready(function()
 			$("#status").text("Nope");
 
 		}
-		
-	});
-	
-	
+}
 
-});
+function keyCodeToLetter(nKeyCode)
+{
+	var aKeyCodes = new Array();
+	aKeyCodes[65] = 'A';
+	aKeyCodes[66] = 'B';
+	aKeyCodes[67] = 'C';
+	aKeyCodes[68] = 'D';
+	aKeyCodes[69] = 'E';
+	aKeyCodes[70] = 'F';
+	aKeyCodes[71] = 'G';
+	return aKeyCodes[nKeyCode];
+}
 
 function fadeOutImage()
 {
